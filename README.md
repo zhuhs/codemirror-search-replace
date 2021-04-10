@@ -1,8 +1,10 @@
 # codemirror-search-replace
+codemirror-search-replace for codemirror search and replace.   
+codemirror-search-replace is developed on the basis of [cm-search](https://github.com/coderaiser/cm-searchbox)
 
 ## Screenshots
-![Find](./assets/find.png)  
-![Find and Replace](./assets/replace.png)
+![Find](https://github.com/zhuhs/codemirror-search-replace/blob/master/assets/find.png)  
+![Find and Replace](https://github.com/zhuhs/codemirror-search-replace/blob/master/assets/find.png)
 
 ## Installation
 

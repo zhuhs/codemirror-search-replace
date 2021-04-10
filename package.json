@@ -1,7 +1,7 @@
 {
   "name": "codemirror-search-replace",
-  "version": "1.0.0",
-  "description": "codemirror search and replace1b",
+  "version": "1.0.1",
+  "description": "codemirror search and replace",
   "main": "src/search.js",
   "scripts": {
     "test": "npm test"
@@ -9,8 +9,17 @@
   "keywords": [
     "codemirror",
     "search",
+    "find",
     "repalce"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuhs/codemirror-search-replace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhuhs/codemirror-search-replace/issues"
+  },
+  "homepage": "https://github.com/zhuhs/codemirror-search-replace",
   "author": "zhuhs",
   "license": "MIT"
 }
