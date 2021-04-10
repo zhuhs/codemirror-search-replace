@@ -1,0 +1,16 @@
+{
+  "name": "codemirror-search-replace",
+  "version": "1.0.0",
+  "description": "codemirror search and replace1b",
+  "main": "src/search.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "codemirror",
+    "search",
+    "repalce"
+  ],
+  "author": "zhuhs",
+  "license": "MIT"
+}
