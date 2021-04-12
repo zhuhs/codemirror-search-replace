@@ -228,6 +228,9 @@
         regExp = o.regExp,
         wholeWord = o.wholeWord;
 
+      if (regExp) {
+        val = val.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+      }
       if (wholeWord) {
         if (caseSensitive) {
           val = val = RegExp("\\b" + val + "\\b");
@@ -319,6 +322,14 @@
         to = this.replaceInput.value,
         reg = RegExp(from, this.caseSensitiveOption.checked ? "g" : "gi");
 
+      if (this.wholeWordOption.checked && !this.regExpOption.checked) {
+        if (this.caseSensitiveOption.checked) {
+          reg = RegExp("\\b" + from + "\\b", 'g');
+        } else {
+          reg = RegExp("\\b" + from + "\\b", "gi");
+        }
+      }
+
       if (!cm.getOption("readOnly")) {
         cursor = cm.getCursor();
         value = cm.getValue();
@@ -352,7 +363,7 @@
       clearSearch(cm);
       var cmEle = cm.display.wrapper;
       Search = null;
-      cmEle.parentElement.removeChild(this.element)
+      cmEle.parentElement.removeChild(this.element);
       cm.focus();
     };
 
@@ -476,7 +487,7 @@
     }
 
     function clearSearch(cm) {
-      cm.operation(() => {
+      cm.operation(function () {
         var state = getSearchState(cm);
         state.lastQuery = state.query;
         if (!state.query) return;
@@ -492,7 +503,8 @@
     function updateCount() {
       var val = self.searchInput.value;
       var matches = [];
-      if (val){
+      if (val) {
+        val = val.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
         var reg;
         if (self.caseSensitiveOption.checked) {
           reg = RegExp(val, "g");
@@ -716,7 +728,7 @@
           '<span class="ace_search_counter">0 matches found.</span>',
           '<span action="toggleRegexpMode" class="ace_button" title="RegExp Search">.*</span>',
           '<span action="toggleCaseSensitive" class="ace_button" title="CaseSensitive Search">Aa</span>',
-          '<span action="toggleWholeWords" class="ace_button" title="Whole Word Search">\\b</span>',
+          '<span action="toggleWholeWords" title="Whole Word Search"></span>',
           "</div>",
           "</div>",
         ].join("");
