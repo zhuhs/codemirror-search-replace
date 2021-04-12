@@ -1,6 +1,6 @@
 {
   "name": "codemirror-search-replace",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "codemirror search and replace",
   "main": "src/search.js",
   "scripts": {
