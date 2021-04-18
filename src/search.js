@@ -330,7 +330,7 @@
         }
       }
 
-      if (!cm.getOption("readOnly")) {
+      if (!cm.getOption("readOnly") && cm.getSelection()) {
         cursor = cm.getCursor();
         value = cm.getValue();
         value = value.replace(reg, to);
@@ -528,6 +528,9 @@
       var countEle = cmEle.parentElement.querySelector(".ace_search_counter");
       if (countEle) {
         countEle.innerText = count + " matches found.";
+      }
+      if (count === 0){
+        cm.setSelection({ch: 0, line: 0},{ch: 0, line: 0});
       }
     }
 
