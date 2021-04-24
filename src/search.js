@@ -729,7 +729,7 @@
           '<div class="ace_search_options">',
           '<span action="toggleReplace" class="ace_button replace_toggle">+</span>',
           '<span class="ace_search_counter">0 matches found.</span>',
-          '<span action="toggleRegexpMode" class="ace_button" title="RegExp Search">.*</span>',
+          '<span action="toggleRegexpMode" class="ace_button" title="RegExp Search"></span>',
           '<span action="toggleCaseSensitive" class="ace_button" title="CaseSensitive Search">Aa</span>',
           '<span action="toggleWholeWords" title="Whole Word Search"></span>',
           "</div>",
